@@ -25,6 +25,46 @@ export default function App() {
             <p style={{ fontWeight: "bold" }}>My Files</p>
             <p>{selectedFile ? selectedFile.path : filePath}</p>
           </div>
+          <div style={styles.controlTools}>
+            <button
+              style={styles.controlButton}
+              onClick={() => {
+                if (selectedFile) {
+                  const newFiles = myFiles.map((file) => {
+                    if (file.id === selectedFile.id) {
+                      return {
+                        ...file,
+                        name: prompt("Enter new name"),
+                      };
+                    }
+                    return file;
+                  });
+                  setMyFiles(newFiles);
+                  setSelectedFile(null);
+                }
+              }}
+            >
+              Rename
+            </button>
+            <button
+              style={styles.controlButton}
+              onClick={() => {
+                setShowChartModal(true);
+              }}
+            >
+              Files Breakdown
+            </button>
+            <button
+              style={styles.controlButton}
+              onClick={() => {
+                if (selectedFile) {
+                  window.open(selectedFile.path, "_blank");
+                }
+              }}
+            >
+              Download
+            </button>
+          </div>
           <div style={styles.fileContainer}>
             <div style={{ width: "100%", padding: 10 }}>
               {myFiles.map((file) => {
