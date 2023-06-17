@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { data } from "./data";
 import { Header } from "./components/Header";
+import { AudioPlayer } from "./components/AudioPlayer";
+import { DocumentViewer } from "./components/DocumentViewer";
+import { VideoPlayer } from "./components/VideoPlayer";
+import { ImageViewer } from "./components/ImageViewer";
 
 export default function App() {
   const [myFiles, setMyFiles] = useState([]);
