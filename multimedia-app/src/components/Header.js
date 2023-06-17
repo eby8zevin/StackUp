@@ -1,9 +1,9 @@
 export const Header = () => {
   return (
     <header style={styles.header}>
-      <h1 style={styles.headerText}>stackup-ahmadabuhasan-initial’s Drive</h1>
+      <h1 style={styles.headerText}>A’s Drive</h1>
       <p style={styles.headerSubText}>
-        A File Manager created by stackup-ahmadabuhasan
+        A File Manager created by ahmadabuhasan
       </p>
     </header>
   );
