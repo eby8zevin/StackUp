@@ -15,6 +15,27 @@ function App() {
     },
   ]);
   const [selectedRow, setSelectedRow] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStopwatchData(
+        stopwatchData.map((stopwatch) => {
+          if (stopwatch.isRunning) {
+            return {
+              ...stopwatch,
+              time:
+                new Date() -
+                stopwatch.time_started -
+                stopwatch.pause.reduce((a, b) => a + b, 0),
+            };
+          }
+          return stopwatch;
+        })
+      );
+    }, 10);
+    return () => clearInterval(interval);
+  }, [stopwatchData]);
+
   return (
     <div className="App">
       <div className="container">
