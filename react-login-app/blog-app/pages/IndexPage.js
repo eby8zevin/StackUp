@@ -29,7 +29,7 @@ const IndexPage = ({ navigation }) => {
   return (
     <View>
       <Image source={require("../assets/header.jpg")} style={styles.images} />
-      <Text style={styles.headerTitle}>Stackie's Blog</Text>
+      <Text style={styles.headerTitle}>Eby's Blog</Text>
       <View style={styles.container}>
         {/* New Blog Entry Button */}
         <TouchableOpacity
