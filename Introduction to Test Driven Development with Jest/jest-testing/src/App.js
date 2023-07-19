@@ -1,4 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-const App = () => <h1>My App</h1>;
+const App = () => {
+  const [heading, setHeading] = useState("Logged Out");
+
+  const onClick = () => {
+    setHeading("Logged In");
+  };
+
+  return (
+    <>
+      <button type="button" onClick={onClick}>
+        Log In
+      </button>
+      <h1>{heading}</h1>
+    </>
+  );
+};
+
 export default App;

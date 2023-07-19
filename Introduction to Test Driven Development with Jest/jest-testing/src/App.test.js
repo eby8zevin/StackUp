@@ -1,11 +1,24 @@
 /** @jest-environment jsdom */
 import React from "react";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import App from "./App";
 
 describe("App component", () => {
-  test("renders correct heading", () => {
+  it("renders Logged out", () => {
     render(<App />);
-    expect(screen.getByRole("heading").textContent).toMatch("My App");
+
+    expect(screen.getByRole("heading").textContent).toMatch("Logged Out");
+  });
+
+  it("renders logged in after button click", async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+    const button = screen.getByRole("button", { name: "Log In" });
+
+    await user.click(button);
+
+    expect(screen.getByRole("heading").textContent).toMatch("Logged In");
   });
 });
