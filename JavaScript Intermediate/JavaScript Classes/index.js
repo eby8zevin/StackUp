@@ -21,3 +21,26 @@ class Book {
     this.availability = availability;
   }
 }
+
+class Library {
+  constructor() {
+    this.book = [];
+  }
+
+  addBook(book) {
+    this.book.push(book);
+  }
+
+  removeBook(ISBN) {
+    this.books = this.books.filter((book) => book.ISBN !== ISBN);
+  }
+
+  displayAvailableBooks() {
+    console.log("Available Books:");
+    this.books.array.forEach((book, index) => {
+      if (book.availability) {
+        console.log(`${index + 1}. ${book.title} by ${book.author}`);
+      }
+    });
+  }
+}
