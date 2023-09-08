@@ -1,17 +1,17 @@
-class MyClass {
-  constructor(property1, property2) {
-    this.property1 = property1;
-    this.property2 = property2;
-  }
+// class MyClass {
+//   constructor(property1, property2) {
+//     this.property1 = property1;
+//     this.property2 = property2;
+//   }
 
-  method1() {}
+//   method1() {}
 
-  method2() {}
-}
+//   method2() {}
+// }
 
-const myInstance = new MyClass("value1", "value2");
-console.log(myInstance.property1);
-myInstance.method1();
+// const myInstance = new MyClass("value1", "value2");
+// console.log(myInstance.property1);
+// myInstance.method1();
 
 class Book {
   constructor(title, author, ISBN, availability = true) {
@@ -24,11 +24,11 @@ class Book {
 
 class Library {
   constructor() {
-    this.book = [];
+    this.books = [];
   }
 
   addBook(book) {
-    this.book.push(book);
+    this.books.push(book);
   }
 
   removeBook(ISBN) {
@@ -37,7 +37,7 @@ class Library {
 
   displayAvailableBooks() {
     console.log("Available Books:");
-    this.books.array.forEach((book, index) => {
+    this.books.forEach((book, index) => {
       if (book.availability) {
         console.log(`${index + 1}. ${book.title} by ${book.author}`);
       }
@@ -51,3 +51,35 @@ class ReferenceBook extends Book {
     this.category = category;
   }
 }
+
+// Create instances of the Library, Book, and ReferenceBook classes
+const library = new Library();
+
+// Add books to the library
+const book1 = new Book(
+  "The Great Gatsby",
+  "F. Scott Fitzgerald",
+  "9780743273565"
+);
+const book2 = new Book("To Kill a Mockingbird", "Harper Lee", "9780060935467");
+const book3 = new ReferenceBook(
+  "1984",
+  "George Orwell",
+  "9780451524935",
+  "Dystopian Fiction"
+);
+
+library.addBook(book1);
+library.addBook(book2);
+library.addBook(book3);
+
+// Display available books
+library.displayAvailableBooks();
+
+console.log("\nRemoving book...");
+
+// Remove a book from the library
+library.removeBook("9780743273565");
+
+// Display available books again
+library.displayAvailableBooks();
