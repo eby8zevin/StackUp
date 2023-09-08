@@ -44,3 +44,10 @@ class Library {
     });
   }
 }
+
+class ReferenceBook extends Book {
+  constructor(title, author, ISBN, category, availability = true) {
+    super(title, author, ISBN, availability);
+    this.category = category;
+  }
+}
