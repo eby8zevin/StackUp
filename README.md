@@ -5,6 +5,15 @@ StackUp enables developers to level up, grow and connect with a global Dev commu
 ## 🔗 Campaigns
 
 <details>
+  <summary><a href="https://app.stackup.dev/campaign_page/javascript-intermediate">JavaScript Intermediate</a></summary>
+  
+  - [x] [JavaScript Classes](JavaScript%20Intermediate/JavaScript%20Classes)
+  - [x] [Switch Statements](JavaScript%20Intermediate/Switch%20Statements)
+  - [x] [Try-Catch-Finally Statements](JavaScript%20Intermediate/Try-Catch-Finally%20Statements)
+  - [ ] [JavaScript Intermediate Campaign Bounty](https://app.stackup.dev/bounty/javascript-intermediate-campaign-bounty)
+</details>
+
+<details>
   <summary><a href="https://app.stackup.dev/campaign_page/web-development-with-react-ii">Web Development with React II</a></summary>
 
   - [x] [Calculator App (React)](Web%20Development%20with%20React%20II/calculator-app) - [aabuhasan-calculator-app](https://aabuhasan-calculator-app.web.app)
