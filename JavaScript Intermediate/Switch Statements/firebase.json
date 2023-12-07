@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "aabuhasan-mathematics-switch",
     "public": "/",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
