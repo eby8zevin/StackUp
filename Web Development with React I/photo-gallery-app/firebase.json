@@ -1,10 +1,7 @@
 {
   "hosting": {
+    "site": "aabuhasan-photo-gallery",
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
